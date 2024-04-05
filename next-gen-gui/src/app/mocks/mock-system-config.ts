@@ -47,7 +47,7 @@ export const config = {
         "natTimeoutSeconds": 10,
         "urAccepted": -1,
         "urUniqueId": "",
-        "urURL": "https://data.syncthing.net/newdata",
+        "urURL": "https://localhost",
         "urPostInsecurely": false,
         "urInitialDelayS": 1800,
         "restartOnWakeup": true,
@@ -57,7 +57,7 @@ export const config = {
         "progressUpdateIntervalS": 5,
         "limitBandwidthInLan": false,
         "minHomeDiskFreePct": 1,
-        "releasesURL": "https://upgrades.syncthing.net/meta.json",
+        "releasesURL": "https://localhost",
         "alwaysLocalNets": [],
         "overwriteRemoteDeviceNamesOnConnect": false,
         "tempIndexMinBlocks": 10

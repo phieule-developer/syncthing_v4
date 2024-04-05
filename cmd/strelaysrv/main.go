@@ -59,7 +59,7 @@ var (
 	poolAddrs        string
 	pools            []string
 	providedBy       string
-	defaultPoolAddrs = "https://relays.syncthing.net/endpoint"
+	defaultPoolAddrs = "http://localhost"
 
 	natEnabled bool
 	natLease   int
