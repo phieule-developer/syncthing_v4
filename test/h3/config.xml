@@ -112,7 +112,7 @@
         <urAccepted>3</urAccepted>
         <urSeen>2</urSeen>
         <urUniqueID>UL4yowgK</urUniqueID>
-        <urURL>https://data.syncthing.net/newdata</urURL>
+        <urURL>https://localhost/newdata</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
         <restartOnWakeup>true</restartOnWakeup>

@@ -41,7 +41,7 @@ type OptionsConfiguration struct {
 	NATLeaseM                   int      `protobuf:"varint,15,opt,name=nat_traversal_lease_m,json=natTraversalLeaseM,proto3,casttype=int" json:"natLeaseMinutes" xml:"natLeaseMinutes" default:"60"`
 	NATRenewalM                 int      `protobuf:"varint,16,opt,name=nat_traversal_renewal_m,json=natTraversalRenewalM,proto3,casttype=int" json:"natRenewalMinutes" xml:"natRenewalMinutes" default:"30"`
 	NATTimeoutS                 int      `protobuf:"varint,17,opt,name=nat_traversal_timeout_s,json=natTraversalTimeoutS,proto3,casttype=int" json:"natTimeoutSeconds" xml:"natTimeoutSeconds" default:"10"`
-	URAccepted                  int      `protobuf:"varint,18,opt,name=usage_reporting_accepted,json=usageReportingAccepted,proto3,casttype=int" json:"urAccepted" xml:"urAccepted"`
+	URAccepted                  int      `protobuf:"varint,18,opt,name=usage_reporting_accepted,json=usageReportingAccepted,proto3,casttype=int" json:"urAccepted" xml:"urAccepted" default:"-1"`
 	URSeen                      int      `protobuf:"varint,19,opt,name=usage_reporting_seen,json=usageReportingSeen,proto3,casttype=int" json:"urSeen" xml:"urSeen"`
 	URUniqueID                  string   `protobuf:"bytes,20,opt,name=usage_reporting_unique_id,json=usageReportingUniqueId,proto3" json:"urUniqueId" xml:"urUniqueID"`
 	URURL                       string   `protobuf:"bytes,21,opt,name=usage_reporting_url,json=usageReportingUrl,proto3" json:"urURL" xml:"urURL" default:"https://localhost"`
