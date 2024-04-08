@@ -27,17 +27,17 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type OptionsConfiguration struct {
 	RawListenAddresses          []string `protobuf:"bytes,1,rep,name=listen_addresses,json=listenAddresses,proto3" json:"listenAddresses" xml:"listenAddress" default:"default"`
 	RawGlobalAnnServers         []string `protobuf:"bytes,2,rep,name=global_discovery_servers,json=globalDiscoveryServers,proto3" json:"globalAnnounceServers" xml:"globalAnnounceServer" default:"default"`
-	GlobalAnnEnabled            bool     `protobuf:"varint,3,opt,name=global_discovery_enabled,json=globalDiscoveryEnabled,proto3" json:"globalAnnounceEnabled" xml:"globalAnnounceEnabled" default:"true"`
-	LocalAnnEnabled             bool     `protobuf:"varint,4,opt,name=local_discovery_enabled,json=localDiscoveryEnabled,proto3" json:"localAnnounceEnabled" xml:"localAnnounceEnabled" default:"true"`
+	GlobalAnnEnabled            bool     `protobuf:"varint,3,opt,name=global_discovery_enabled,json=globalDiscoveryEnabled,proto3" json:"globalAnnounceEnabled" xml:"globalAnnounceEnabled" default:"false"`
+	LocalAnnEnabled             bool     `protobuf:"varint,4,opt,name=local_discovery_enabled,json=localDiscoveryEnabled,proto3" json:"localAnnounceEnabled" xml:"localAnnounceEnabled" default:"false"`
 	LocalAnnPort                int      `protobuf:"varint,5,opt,name=local_announce_port,json=localAnnouncePort,proto3,casttype=int" json:"localAnnouncePort" xml:"localAnnouncePort" default:"21027"`
 	LocalAnnMCAddr              string   `protobuf:"bytes,6,opt,name=local_announce_multicast_address,json=localAnnounceMulticastAddress,proto3" json:"localAnnounceMCAddr" xml:"localAnnounceMCAddr" default:"[ff12::8384]:21027"`
 	MaxSendKbps                 int      `protobuf:"varint,7,opt,name=max_send_kbps,json=maxSendKbps,proto3,casttype=int" json:"maxSendKbps" xml:"maxSendKbps"`
 	MaxRecvKbps                 int      `protobuf:"varint,8,opt,name=max_recv_kbps,json=maxRecvKbps,proto3,casttype=int" json:"maxRecvKbps" xml:"maxRecvKbps"`
 	ReconnectIntervalS          int      `protobuf:"varint,9,opt,name=reconnection_interval_s,json=reconnectionIntervalS,proto3,casttype=int" json:"reconnectionIntervalS" xml:"reconnectionIntervalS" default:"60"`
-	RelaysEnabled               bool     `protobuf:"varint,10,opt,name=relays_enabled,json=relaysEnabled,proto3" json:"relaysEnabled" xml:"relaysEnabled" default:"true"`
+	RelaysEnabled               bool     `protobuf:"varint,10,opt,name=relays_enabled,json=relaysEnabled,proto3" json:"relaysEnabled" xml:"relaysEnabled" default:"false"`
 	RelayReconnectIntervalM     int      `protobuf:"varint,11,opt,name=relays_reconnect_interval_m,json=relaysReconnectIntervalM,proto3,casttype=int" json:"relayReconnectIntervalM" xml:"relayReconnectIntervalM" default:"10"`
 	StartBrowser                bool     `protobuf:"varint,12,opt,name=start_browser,json=startBrowser,proto3" json:"startBrowser" xml:"startBrowser" default:"true"`
-	NATEnabled                  bool     `protobuf:"varint,14,opt,name=nat_traversal_enabled,json=natTraversalEnabled,proto3" json:"natEnabled" xml:"natEnabled" default:"true"`
+	NATEnabled                  bool     `protobuf:"varint,14,opt,name=nat_traversal_enabled,json=natTraversalEnabled,proto3" json:"natEnabled" xml:"natEnabled" default:"false"`
 	NATLeaseM                   int      `protobuf:"varint,15,opt,name=nat_traversal_lease_m,json=natTraversalLeaseM,proto3,casttype=int" json:"natLeaseMinutes" xml:"natLeaseMinutes" default:"60"`
 	NATRenewalM                 int      `protobuf:"varint,16,opt,name=nat_traversal_renewal_m,json=natTraversalRenewalM,proto3,casttype=int" json:"natRenewalMinutes" xml:"natRenewalMinutes" default:"30"`
 	NATTimeoutS                 int      `protobuf:"varint,17,opt,name=nat_traversal_timeout_s,json=natTraversalTimeoutS,proto3,casttype=int" json:"natTimeoutSeconds" xml:"natTimeoutSeconds" default:"10"`
