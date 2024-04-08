@@ -76,16 +76,16 @@ func TestDefaultValues(t *testing.T) {
 			ProgressUpdateIntervalS:   5,
 			LimitBandwidthInLan:       false,
 			MinHomeDiskFree:           Size{1, "%"},
-			URURL:                     "https://data.syncthing.net/newdata",
+			URURL:                     "https://localhost",
 			URInitialDelayS:           1800,
 			URPostInsecurely:          false,
-			ReleasesURL:               "https://upgrades.syncthing.net/meta.json",
+			ReleasesURL:               "https://localhost",
 			AlwaysLocalNets:           []string{},
 			OverwriteRemoteDevNames:   false,
 			TempIndexMinBlocks:        10,
 			UnackedNotificationIDs:    []string{"authenticationUserAndPassword"},
 			SetLowPriority:            true,
-			CRURL:                     "https://crash.syncthing.net/newcrash",
+			CRURL:                     "https://localhost",
 			CREnabled:                 true,
 			StunKeepaliveStartS:       180,
 			StunKeepaliveMinS:         20,
@@ -849,7 +849,7 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Default listen plus default relays is now "default"
 		{
 			{"tcp://0.0.0.0:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint"},
+			// {"dynamic+https://relays.syncthing.net/endpoint"},
 			{"default"},
 		},
 		// Default listen address without any relay addresses gets converted
@@ -870,13 +870,13 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Non-default listen plus default relays gets copied verbatim
 		{
 			{"tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint"},
-			{"tcp://1.2.3.4:22000", "dynamic+https://relays.syncthing.net/endpoint"},
+			// {"dynamic+https://relays.syncthing.net/endpoint"},
+			// {"tcp://1.2.3.4:22000", "dynamic+https://relays.syncthing.net/endpoint"},
 		},
 		// Default stuff gets sucked into "default", the rest gets copied
 		{
 			{"tcp://0.0.0.0:22000", "tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint", "relay://other.example.com"},
+			// {"dynamic+https://relays.syncthing.net/endpoint", "relay://other.example.com"},
 			{"default", "tcp://1.2.3.4:22000", "relay://other.example.com"},
 		},
 	}

@@ -27,24 +27,24 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 type OptionsConfiguration struct {
 	RawListenAddresses          []string `protobuf:"bytes,1,rep,name=listen_addresses,json=listenAddresses,proto3" json:"listenAddresses" xml:"listenAddress" default:"default"`
 	RawGlobalAnnServers         []string `protobuf:"bytes,2,rep,name=global_discovery_servers,json=globalDiscoveryServers,proto3" json:"globalAnnounceServers" xml:"globalAnnounceServer" default:"default"`
-	GlobalAnnEnabled            bool     `protobuf:"varint,3,opt,name=global_discovery_enabled,json=globalDiscoveryEnabled,proto3" json:"globalAnnounceEnabled" xml:"globalAnnounceEnabled" default:"true"`
-	LocalAnnEnabled             bool     `protobuf:"varint,4,opt,name=local_discovery_enabled,json=localDiscoveryEnabled,proto3" json:"localAnnounceEnabled" xml:"localAnnounceEnabled" default:"true"`
+	GlobalAnnEnabled            bool     `protobuf:"varint,3,opt,name=global_discovery_enabled,json=globalDiscoveryEnabled,proto3" json:"globalAnnounceEnabled" xml:"globalAnnounceEnabled" default:"false"`
+	LocalAnnEnabled             bool     `protobuf:"varint,4,opt,name=local_discovery_enabled,json=localDiscoveryEnabled,proto3" json:"localAnnounceEnabled" xml:"localAnnounceEnabled" default:"false"`
 	LocalAnnPort                int      `protobuf:"varint,5,opt,name=local_announce_port,json=localAnnouncePort,proto3,casttype=int" json:"localAnnouncePort" xml:"localAnnouncePort" default:"21027"`
 	LocalAnnMCAddr              string   `protobuf:"bytes,6,opt,name=local_announce_multicast_address,json=localAnnounceMulticastAddress,proto3" json:"localAnnounceMCAddr" xml:"localAnnounceMCAddr" default:"[ff12::8384]:21027"`
 	MaxSendKbps                 int      `protobuf:"varint,7,opt,name=max_send_kbps,json=maxSendKbps,proto3,casttype=int" json:"maxSendKbps" xml:"maxSendKbps"`
 	MaxRecvKbps                 int      `protobuf:"varint,8,opt,name=max_recv_kbps,json=maxRecvKbps,proto3,casttype=int" json:"maxRecvKbps" xml:"maxRecvKbps"`
 	ReconnectIntervalS          int      `protobuf:"varint,9,opt,name=reconnection_interval_s,json=reconnectionIntervalS,proto3,casttype=int" json:"reconnectionIntervalS" xml:"reconnectionIntervalS" default:"60"`
-	RelaysEnabled               bool     `protobuf:"varint,10,opt,name=relays_enabled,json=relaysEnabled,proto3" json:"relaysEnabled" xml:"relaysEnabled" default:"true"`
+	RelaysEnabled               bool     `protobuf:"varint,10,opt,name=relays_enabled,json=relaysEnabled,proto3" json:"relaysEnabled" xml:"relaysEnabled" default:"false"`
 	RelayReconnectIntervalM     int      `protobuf:"varint,11,opt,name=relays_reconnect_interval_m,json=relaysReconnectIntervalM,proto3,casttype=int" json:"relayReconnectIntervalM" xml:"relayReconnectIntervalM" default:"10"`
 	StartBrowser                bool     `protobuf:"varint,12,opt,name=start_browser,json=startBrowser,proto3" json:"startBrowser" xml:"startBrowser" default:"true"`
-	NATEnabled                  bool     `protobuf:"varint,14,opt,name=nat_traversal_enabled,json=natTraversalEnabled,proto3" json:"natEnabled" xml:"natEnabled" default:"true"`
+	NATEnabled                  bool     `protobuf:"varint,14,opt,name=nat_traversal_enabled,json=natTraversalEnabled,proto3" json:"natEnabled" xml:"natEnabled" default:"false"`
 	NATLeaseM                   int      `protobuf:"varint,15,opt,name=nat_traversal_lease_m,json=natTraversalLeaseM,proto3,casttype=int" json:"natLeaseMinutes" xml:"natLeaseMinutes" default:"60"`
 	NATRenewalM                 int      `protobuf:"varint,16,opt,name=nat_traversal_renewal_m,json=natTraversalRenewalM,proto3,casttype=int" json:"natRenewalMinutes" xml:"natRenewalMinutes" default:"30"`
 	NATTimeoutS                 int      `protobuf:"varint,17,opt,name=nat_traversal_timeout_s,json=natTraversalTimeoutS,proto3,casttype=int" json:"natTimeoutSeconds" xml:"natTimeoutSeconds" default:"10"`
 	URAccepted                  int      `protobuf:"varint,18,opt,name=usage_reporting_accepted,json=usageReportingAccepted,proto3,casttype=int" json:"urAccepted" xml:"urAccepted"`
 	URSeen                      int      `protobuf:"varint,19,opt,name=usage_reporting_seen,json=usageReportingSeen,proto3,casttype=int" json:"urSeen" xml:"urSeen"`
 	URUniqueID                  string   `protobuf:"bytes,20,opt,name=usage_reporting_unique_id,json=usageReportingUniqueId,proto3" json:"urUniqueId" xml:"urUniqueID"`
-	URURL                       string   `protobuf:"bytes,21,opt,name=usage_reporting_url,json=usageReportingUrl,proto3" json:"urURL" xml:"urURL" default:"https://data.syncthing.net/newdata"`
+	URURL                       string   `protobuf:"bytes,21,opt,name=usage_reporting_url,json=usageReportingUrl,proto3" json:"urURL" xml:"urURL" default:"https://localhost"`
 	URPostInsecurely            bool     `protobuf:"varint,22,opt,name=usage_reporting_post_insecurely,json=usageReportingPostInsecurely,proto3" json:"urPostInsecurely" xml:"urPostInsecurely" default:"false"`
 	URInitialDelayS             int      `protobuf:"varint,23,opt,name=usage_reporting_initial_delay_s,json=usageReportingInitialDelayS,proto3,casttype=int" json:"urInitialDelayS" xml:"urInitialDelayS" default:"1800"`
 	AutoUpgradeIntervalH        int      `protobuf:"varint,25,opt,name=auto_upgrade_interval_h,json=autoUpgradeIntervalH,proto3,casttype=int" json:"autoUpgradeIntervalH" xml:"autoUpgradeIntervalH" default:"12"`
@@ -54,7 +54,7 @@ type OptionsConfiguration struct {
 	ProgressUpdateIntervalS     int      `protobuf:"varint,29,opt,name=progress_update_interval_s,json=progressUpdateIntervalS,proto3,casttype=int" json:"progressUpdateIntervalS" xml:"progressUpdateIntervalS" default:"5"`
 	LimitBandwidthInLan         bool     `protobuf:"varint,30,opt,name=limit_bandwidth_in_lan,json=limitBandwidthInLan,proto3" json:"limitBandwidthInLan" xml:"limitBandwidthInLan" default:"false"`
 	MinHomeDiskFree             Size     `protobuf:"bytes,31,opt,name=min_home_disk_free,json=minHomeDiskFree,proto3" json:"minHomeDiskFree" xml:"minHomeDiskFree" default:"1 %"`
-	ReleasesURL                 string   `protobuf:"bytes,32,opt,name=releases_url,json=releasesUrl,proto3" json:"releasesURL" xml:"releasesURL" default:"https://upgrades.syncthing.net/meta.json"`
+	ReleasesURL                 string   `protobuf:"bytes,32,opt,name=releases_url,json=releasesUrl,proto3" json:"releasesURL" xml:"releasesURL" default:"https://localhost"`
 	AlwaysLocalNets             []string `protobuf:"bytes,33,rep,name=always_local_nets,json=alwaysLocalNets,proto3" json:"alwaysLocalNets" xml:"alwaysLocalNet"`
 	OverwriteRemoteDevNames     bool     `protobuf:"varint,34,opt,name=overwrite_remote_device_names_on_connect,json=overwriteRemoteDeviceNamesOnConnect,proto3" json:"overwriteRemoteDeviceNamesOnConnect" xml:"overwriteRemoteDeviceNamesOnConnect" default:"false"`
 	TempIndexMinBlocks          int      `protobuf:"varint,35,opt,name=temp_index_min_blocks,json=tempIndexMinBlocks,proto3,casttype=int" json:"tempIndexMinBlocks" xml:"tempIndexMinBlocks" default:"10"`
@@ -63,7 +63,7 @@ type OptionsConfiguration struct {
 	DeprecatedDefaultFolderPath string   `protobuf:"bytes,38,opt,name=default_folder_path,json=defaultFolderPath,proto3" json:"-" xml:"defaultFolderPath,omitempty"` // Deprecated: Do not use.
 	SetLowPriority              bool     `protobuf:"varint,39,opt,name=set_low_priority,json=setLowPriority,proto3" json:"setLowPriority" xml:"setLowPriority" default:"true"`
 	RawMaxFolderConcurrency     int      `protobuf:"varint,40,opt,name=max_folder_concurrency,json=maxFolderConcurrency,proto3,casttype=int" json:"maxFolderConcurrency" xml:"maxFolderConcurrency"`
-	CRURL                       string   `protobuf:"bytes,41,opt,name=crash_reporting_url,json=crashReportingUrl,proto3" json:"crURL" xml:"crashReportingURL" default:"https://crash.syncthing.net/newcrash"`
+	CRURL                       string   `protobuf:"bytes,41,opt,name=crash_reporting_url,json=crashReportingUrl,proto3" json:"crURL" xml:"crashReportingURL" default:"https://localhost"`
 	CREnabled                   bool     `protobuf:"varint,42,opt,name=crash_reporting_enabled,json=crashReportingEnabled,proto3" json:"crashReportingEnabled" xml:"crashReportingEnabled" default:"true"`
 	StunKeepaliveStartS         int      `protobuf:"varint,43,opt,name=stun_keepalive_start_s,json=stunKeepaliveStartS,proto3,casttype=int" json:"stunKeepaliveStartS" xml:"stunKeepaliveStartS" default:"180"`
 	StunKeepaliveMinS           int      `protobuf:"varint,44,opt,name=stun_keepalive_min_s,json=stunKeepaliveMinS,proto3,casttype=int" json:"stunKeepaliveMinS" xml:"stunKeepaliveMinS" default:"20"`

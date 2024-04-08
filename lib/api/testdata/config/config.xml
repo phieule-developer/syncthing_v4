@@ -111,7 +111,7 @@
         <urAccepted>3</urAccepted>
         <urSeen>2</urSeen>
         <urUniqueID>tmwxxCqi</urUniqueID>
-        <urURL>https://data.syncthing.net/newdata</urURL>
+        <urURL>https://localhost</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
         <restartOnWakeup>true</restartOnWakeup>
@@ -122,7 +122,7 @@
         <progressUpdateIntervalS>5</progressUpdateIntervalS>
         <limitBandwidthInLan>false</limitBandwidthInLan>
         <minHomeDiskFree unit="%">1</minHomeDiskFree>
-        <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
+        <releasesURL>https://localhost</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
         <trafficClass>0</trafficClass>
