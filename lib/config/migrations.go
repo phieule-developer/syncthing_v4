@@ -407,9 +407,9 @@ func migrateToConfigV12(cfg *Configuration) {
 	var newDiscoServers []string
 	var useDefault bool
 	for _, addr := range cfg.Options.RawGlobalAnnServers {
-		if addr == "udp4://announce.syncthing.net:22026" {
+		if addr == "udp4://localhost:22026" {
 			useDefault = true
-		} else if addr == "udp6://announce-v6.syncthing.net:22026" {
+		} else if addr == "udp6://announce-v6localhost:22026" {
 			useDefault = true
 		} else {
 			newDiscoServers = append(newDiscoServers, addr)

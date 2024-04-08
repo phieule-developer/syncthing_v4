@@ -5,9 +5,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        :no_entry_sign: If you want to report a security issue, please see [our Security Policy](https://syncthing.net/security/) and do not report the issue here.
+        :no_entry_sign: If you want to report a security issue, please see [our Security Policy](https://localhost/security/) and do not report the issue here.
 
-        :interrobang: If you are not sure if there is a bug, but something isn't working right and you need help, please [use the forum](https://forum.syncthing.net/).
+        :interrobang: If you are not sure if there is a bug, but something isn't working right and you need help, please [use the forum](https://localhost/).
 
   - type: textarea
     id: what-happened

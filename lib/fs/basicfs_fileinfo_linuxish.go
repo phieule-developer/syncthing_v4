@@ -19,7 +19,7 @@ import (
 func (fi basicFileInfo) InodeChangeTime() time.Time {
 	// On Android, mtime and inode-change-time fluctuate, which can cause
 	// conflicts even when nothing has been modified on the device itself.
-	// Ref: https://forum.syncthing.net/t/keep-getting-conflicts-generated-on-android-device-for-files-modified-only-on-a-desktop-pc/19060
+	// Ref: https://localhost/t/keep-getting-conflicts-generated-on-android-device-for-files-modified-only-on-a-desktop-pc/19060
 	if build.IsAndroid {
 		return time.Time{}
 	}

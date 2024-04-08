@@ -38,12 +38,12 @@ involvement.
 
 Every contribution is welcome. If you want to contribute but are unsure
 where to start, any open issues are fair game! See the [Contribution
-Guidelines](https://docs.syncthing.net/dev/contributing.html) for the full
+Guidelines](https://localhost/dev/contributing.html) for the full
 story on committing code.
 
 ## Contributing Documentation
 
-Updates to the [documentation site](https://docs.syncthing.net/) can be
+Updates to the [documentation site](https://localhost/) can be
 made as pull requests on the [documentation
 repository](https://github.com/syncthing/docs).
 

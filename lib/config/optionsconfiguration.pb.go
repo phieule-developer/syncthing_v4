@@ -61,16 +61,16 @@ type OptionsConfiguration struct {
 	UnackedNotificationIDs      []string `protobuf:"bytes,36,rep,name=unacked_notification_ids,json=unackedNotificationIds,proto3" json:"unackedNotificationIDs" xml:"unackedNotificationID"`
 	TrafficClass                int      `protobuf:"varint,37,opt,name=traffic_class,json=trafficClass,proto3,casttype=int" json:"trafficClass" xml:"trafficClass"`
 	DeprecatedDefaultFolderPath string   `protobuf:"bytes,38,opt,name=default_folder_path,json=defaultFolderPath,proto3" json:"-" xml:"defaultFolderPath,omitempty"` // Deprecated: Do not use.
-	SetLowPriority              bool     `protobuf:"varint,39,opt,name=set_low_priority,json=setLowPriority,proto3" json:"setLowPriority" xml:"setLowPriority" default:"true"`
+	SetLowPriority              bool     `protobuf:"varint,39,opt,name=set_low_priority,json=setLowPriority,proto3" json:"setLowPriority" xml:"setLowPriority" default:"false"`
 	RawMaxFolderConcurrency     int      `protobuf:"varint,40,opt,name=max_folder_concurrency,json=maxFolderConcurrency,proto3,casttype=int" json:"maxFolderConcurrency" xml:"maxFolderConcurrency"`
 	CRURL                       string   `protobuf:"bytes,41,opt,name=crash_reporting_url,json=crashReportingUrl,proto3" json:"crURL" xml:"crashReportingURL" default:"https://localhost"`
-	CREnabled                   bool     `protobuf:"varint,42,opt,name=crash_reporting_enabled,json=crashReportingEnabled,proto3" json:"crashReportingEnabled" xml:"crashReportingEnabled" default:"true"`
+	CREnabled                   bool     `protobuf:"varint,42,opt,name=crash_reporting_enabled,json=crashReportingEnabled,proto3" json:"crashReportingEnabled" xml:"crashReportingEnabled" default:"false"`
 	StunKeepaliveStartS         int      `protobuf:"varint,43,opt,name=stun_keepalive_start_s,json=stunKeepaliveStartS,proto3,casttype=int" json:"stunKeepaliveStartS" xml:"stunKeepaliveStartS" default:"180"`
 	StunKeepaliveMinS           int      `protobuf:"varint,44,opt,name=stun_keepalive_min_s,json=stunKeepaliveMinS,proto3,casttype=int" json:"stunKeepaliveMinS" xml:"stunKeepaliveMinS" default:"20"`
 	RawStunServers              []string `protobuf:"bytes,45,rep,name=stun_servers,json=stunServers,proto3" json:"stunServers" xml:"stunServer" default:"default"`
-	DatabaseTuning              Tuning   `protobuf:"varint,46,opt,name=database_tuning,json=databaseTuning,proto3,enum=config.Tuning" json:"databaseTuning" xml:"databaseTuning" restart:"true"`
+	DatabaseTuning              Tuning   `protobuf:"varint,46,opt,name=database_tuning,json=databaseTuning,proto3,enum=config.Tuning" json:"databaseTuning" xml:"databaseTuning" restart:"false"`
 	RawMaxCIRequestKiB          int      `protobuf:"varint,47,opt,name=max_concurrent_incoming_request_kib,json=maxConcurrentIncomingRequestKib,proto3,casttype=int" json:"maxConcurrentIncomingRequestKiB" xml:"maxConcurrentIncomingRequestKiB"`
-	AnnounceLANAddresses        bool     `protobuf:"varint,48,opt,name=announce_lan_addresses,json=announceLanAddresses,proto3" json:"announceLANAddresses" xml:"announceLANAddresses" default:"true"`
+	AnnounceLANAddresses        bool     `protobuf:"varint,48,opt,name=announce_lan_addresses,json=announceLanAddresses,proto3" json:"announceLANAddresses" xml:"announceLANAddresses" default:"false"`
 	SendFullIndexOnUpgrade      bool     `protobuf:"varint,49,opt,name=send_full_index_on_upgrade,json=sendFullIndexOnUpgrade,proto3" json:"sendFullIndexOnUpgrade" xml:"sendFullIndexOnUpgrade"`
 	FeatureFlags                []string `protobuf:"bytes,50,rep,name=feature_flags,json=featureFlags,proto3" json:"featureFlags" xml:"featureFlag"`
 	// The number of connections at which we stop trying to connect to more

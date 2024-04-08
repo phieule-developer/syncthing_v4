@@ -127,7 +127,7 @@ given flags to the contrary.
 .sp
 The discovery server can also be obtained through apt, the Debian/Ubuntu package
 manager. Recent releases can be found at syncthing’s
-\fI\%apt repository\fP <\fBhttps://apt.syncthing.net/\fP>\&. The name of the package is
+\fI\%apt repository\fP <\fBhttps://localhost/\fP>\&. The name of the package is
 syncthing\-discosrv.
 .SS Configuring
 .sp
@@ -211,7 +211,7 @@ certificate is not used for client requests but only for replication
 connections.
 .sp
 Authentication of replication connections is done using \fI\%Syncthing\-style
-device IDs\fP <\fBhttps://docs.syncthing.net/dev/device-ids.html#id1\fP> only \- CA
+device IDs\fP <\fBhttps://localhost/dev/device-ids.html#id1\fP> only \- CA
 verification is not available. The device IDs in question are those printed
 by the discovery server on startup.
 .sp
@@ -410,7 +410,7 @@ server {
 .UNINDENT
 .sp
 An example of automating the SSL certificates and reverse\-proxying the Discovery
-Server and Syncthing using Nginx, \fI\%Let’s Encrypt\fP <\fBhttps://letsencrypt.org/\fP> and Docker can be found \fI\%here\fP <\fBhttps://forum.syncthing.net/t/docker-syncthing-and-syncthing-discovery-behind-nginx-reverse-proxy-with-lets-encrypt/6880\fP>\&.
+Server and Syncthing using Nginx, \fI\%Let’s Encrypt\fP <\fBhttps://letsencrypt.org/\fP> and Docker can be found \fI\%here\fP <\fBhttps://localhost/t/docker-syncthing-and-syncthing-discovery-behind-nginx-reverse-proxy-with-lets-encrypt/6880\fP>\&.
 .SS Apache
 .sp
 The following lines must be added to the configuration:
@@ -479,7 +479,7 @@ The following lines must be added to the Caddyfile:
 .UNINDENT
 .sp
 For more details, see also the recommendations in the
-\fI\%Reverse Proxy Setup\fP <\fBhttps://docs.syncthing.net/users/reverseproxy.html\fP>
+\fI\%Reverse Proxy Setup\fP <\fBhttps://localhost/users/reverseproxy.html\fP>
 page. Note that that page is directed at setting up a proxy for the
 Syncthing web UI. You should do the proper path and port adjustments to proxying
 the discovery server and your particular setup.

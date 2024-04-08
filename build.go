@@ -656,7 +656,7 @@ func buildDeb(target target) {
 		}
 	}
 
-	maintainer := "Syncthing Release Management <release@syncthing.net>"
+	maintainer := "Syncthing Release Management <release@localhost>"
 	debver := version
 	if strings.HasPrefix(debver, "v") {
 		debver = debver[1:]
@@ -675,7 +675,7 @@ func buildDeb(target target) {
 		"-m", maintainer,
 		"--vendor", maintainer,
 		"--description", target.description,
-		"--url", "https://syncthing.net/",
+		"--url", "https://localhost/",
 		"--license", "MPL-2",
 	}
 	for _, dep := range target.debdeps {

@@ -196,7 +196,7 @@ func dbIsLarge(location string) bool {
 	if ^uint(0)>>63 == 0 {
 		// We're compiled for a 32 bit architecture. We've seen trouble with
 		// large settings there.
-		// (https://forum.syncthing.net/t/many-small-ldb-files-with-database-tuning/13842)
+		// (https://localhost/t/many-small-ldb-files-with-database-tuning/13842)
 		return false
 	}
 

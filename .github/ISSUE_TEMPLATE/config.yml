@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: I need help / I have a question
-    url: https://forum.syncthing.net/
+    url: https://localhost/
     about: Ask questions, get support, and discuss with other community members.
   - name: Android issues
     url: https://github.com/syncthing/syncthing-android/issues/

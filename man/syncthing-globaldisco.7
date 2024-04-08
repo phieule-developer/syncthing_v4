@@ -81,7 +81,7 @@ Many Requests).
 .sp
 Queries are performed as HTTPS GET requests to the announce server URL. The
 requested device ID is passed as the query parameter “device”, in canonical
-string form, i.e. \fBhttps://discovery.syncthing.net/?device=ABC12345\-....\fP
+string form, i.e. \fBhttps://localhost/?device=ABC12345\-....\fP
 .sp
 Successful responses will have status code \fB200\fP (OK) and carry a JSON payload
 of the same format as the announcement above. The response will not contain
@@ -110,7 +110,7 @@ simply nonexistent root CA bundles. Instead, Syncthing can verify the
 discovery server certificate fingerprint using the device ID mechanism. This
 is certificate pinning and conveyed in the Syncthing configuration as a
 synthetic “id” parameter on the discovery server URL:
-\fBhttps://discovery.syncthing.net/?id=...\fP\&. The “id” parameter is not, in
+\fBhttps://localhost/?id=...\fP\&. The “id” parameter is not, in
 fact, sent to the discovery server \- it’s used by Syncthing itself to know
 which certificate to expect on the server side.
 .sp

@@ -849,7 +849,7 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Default listen plus default relays is now "default"
 		{
 			{"tcp://0.0.0.0:22000"},
-			// {"dynamic+https://relays.syncthing.net/endpoint"},
+			// {"dynamic+https://localhost/endpoint"},
 			{"default"},
 		},
 		// Default listen address without any relay addresses gets converted
@@ -870,13 +870,13 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Non-default listen plus default relays gets copied verbatim
 		{
 			{"tcp://1.2.3.4:22000"},
-			// {"dynamic+https://relays.syncthing.net/endpoint"},
-			// {"tcp://1.2.3.4:22000", "dynamic+https://relays.syncthing.net/endpoint"},
+			// {"dynamic+https://localhost/endpoint"},
+			// {"tcp://1.2.3.4:22000", "dynamic+https://localhost/endpoint"},
 		},
 		// Default stuff gets sucked into "default", the rest gets copied
 		{
 			{"tcp://0.0.0.0:22000", "tcp://1.2.3.4:22000"},
-			// {"dynamic+https://relays.syncthing.net/endpoint", "relay://other.example.com"},
+			// {"dynamic+https://localhost/endpoint", "relay://other.example.com"},
 			{"default", "tcp://1.2.3.4:22000", "relay://other.example.com"},
 		},
 	}

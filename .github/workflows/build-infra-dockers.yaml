@@ -10,7 +10,7 @@ env:
   GO_VERSION: "~1.22.0"
   CGO_ENABLED: "0"
   BUILD_USER: docker
-  BUILD_HOST: github.syncthing.net
+  BUILD_HOST: localhost
 
 jobs:
   docker-syncthing:

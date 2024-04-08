@@ -1,7 +1,7 @@
 export const systemStatus = {
     "alloc": 30618136,
     "connectionServiceStatus": {
-        "dynamic+https://relays.syncthing.net/endpoint": {
+        "dynamic+https://localhost/endpoint": {
             "error": null,
             "lanAddresses": [
                 "relay://23.92.71.120:443/?id=53STGR7-YBM6FCX-PAZ2RHM-YPY6OEJ-WYHVZO7-PCKQRCK-PZLTP7T-434XCAD&pingInterval=1m0s&networkTimeout=2m0s&sessionLimitBps=0&globalLimitBps=0&statusAddr=:22070&providedBy=canton7"
@@ -23,12 +23,12 @@ export const systemStatus = {
     "cpuPercent": 0,
     "discoveryEnabled": true,
     "discoveryErrors": {
-        "global@https://discovery-v4-1.syncthing.net/v2/": "500 Internal Server Error",
-        "global@https://discovery-v4-2.syncthing.net/v2/": "Post https://discovery-v4-2.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "global@https://discovery-v4-3.syncthing.net/v2/": "Post https://discovery-v4-3.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "global@https://discovery-v6-1.syncthing.net/v2/": "Post https://discovery-v6-1.syncthing.net/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host",
-        "global@https://discovery-v6-2.syncthing.net/v2/": "Post https://discovery-v6-2.syncthing.net/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host",
-        "global@https://discovery-v6-3.syncthing.net/v2/": "Post https://discovery-v6-3.syncthing.net/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host"
+        "global@https://discovery-v4-1localhost/v2/": "500 Internal Server Error",
+        "global@https://discovery-v4-2localhost/v2/": "Post https://discovery-v4-2localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "global@https://discovery-v4-3localhost/v2/": "Post https://discovery-v4-3localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "global@https://discovery-v6-1localhost/v2/": "Post https://discovery-v6-1localhost/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host",
+        "global@https://discovery-v6-2localhost/v2/": "Post https://discovery-v6-2localhost/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host",
+        "global@https://discovery-v6-3localhost/v2/": "Post https://discovery-v6-3localhost/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host"
     },
     "discoveryMethods": 8,
     "goroutines": 49,

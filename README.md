@@ -70,7 +70,7 @@ If you've found something that is clearly a
 bug, feel free to report it in the [GitHub issue tracker][10].
 
 If you believe that you’ve found a Syncthing-related security vulnerability,
-please report it by emailing security@syncthing.net. Do not report it in the
+please report it by emailing security@localhost. Do not report it in the
 Forum or issue tracker.
 
 ## Building
@@ -83,7 +83,7 @@ build process.
 ## Signed Releases
 
 As of v0.10.15 and onwards, release binaries are GPG signed with the key
-D26E6ED000654A3E, available from https://syncthing.net/security/ and
+D26E6ED000654A3E, available from https://localhost/security/ and
 most key servers.
 
 There is also a built-in automatic upgrade mechanism (disabled in some
@@ -96,17 +96,17 @@ Please see the Syncthing [documentation site][6] [[source]][17].
 
 All code is licensed under the [MPLv2 License][7].
 
-[1]: https://docs.syncthing.net/specs/bep-v1.html
-[2]: https://docs.syncthing.net/intro/getting-started.html
+[1]: https://localhost/specs/bep-v1.html
+[2]: https://localhost/intro/getting-started.html
 [3]: https://github.com/syncthing/syncthing/blob/main/etc
-[5]: https://docs.syncthing.net/dev/building.html
-[6]: https://docs.syncthing.net/
+[5]: https://localhost/dev/building.html
+[6]: https://localhost/
 [7]: https://github.com/syncthing/syncthing/blob/main/LICENSE
-[8]: https://forum.syncthing.net/
+[8]: https://localhost/
 [10]: https://github.com/syncthing/syncthing/issues
-[11]: https://docs.syncthing.net/users/contrib.html#gui-wrappers
+[11]: https://localhost/users/contrib.html#gui-wrappers
 [13]: https://github.com/syncthing/syncthing/blob/main/GOALS.md
 [14]: assets/logo-text-128.png
-[15]: https://syncthing.net/
+[15]: https://localhost/
 [16]: https://github.com/syncthing/syncthing/blob/main/README-Docker.md
 [17]: https://github.com/syncthing/docs

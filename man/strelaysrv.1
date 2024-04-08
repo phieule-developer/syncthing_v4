@@ -50,7 +50,7 @@ strelaysrv [\-debug] [\-ext\-address=<address>] [\-global\-rate=<bytes/s>] [\-ke
 Syncthing relies on a network of community\-contributed relay servers. Anyone
 can run a relay server, and it will automatically join the relay pool and be
 available to Syncthing users. The current list of relays can be found at
-\fI\%https://relays.syncthing.net/\fP\&.
+\fI\%https://localhost/\fP\&.
 .SH OPTIONS
 .INDENT 0.0
 .TP
@@ -127,7 +127,7 @@ How often pings are sent (default 1m0s).
 .TP
 .B \-pools=<pool addresses>
 Comma separated list of relay pool addresses to join (default
-“\fI\%https://relays.syncthing.net/endpoint\fP”). Blank to disable announcement to
+“\fI\%https://localhost/endpoint\fP”). Blank to disable announcement to
 a pool, thereby remaining a private relay.
 .UNINDENT
 .INDENT 0.0
@@ -175,7 +175,7 @@ The startup message prints instructions on how to change this.
 .sp
 The relay server can also be obtained through apt, the Debian/Ubuntu package
 manager. Recent releases can be found at syncthing’s
-\fI\%apt repository\fP <\fBhttps://apt.syncthing.net/\fP>\&. The name of the package is
+\fI\%apt repository\fP <\fBhttps://localhost/\fP>\&. The name of the package is
 syncthing\-relaysrv.
 .SH SETTING UP
 .sp
@@ -282,7 +282,7 @@ although your mileage may vary.
 .SH FIREWALL CONSIDERATIONS
 .sp
 The relay server listens on two ports by default.  One for data connections and the other
-for providing public statistics at \fI\%https://relays.syncthing.net/\fP\&.  The firewall, such as
+for providing public statistics at \fI\%https://localhost/\fP\&.  The firewall, such as
 \fBiptables\fP, must permit incoming TCP connections to the following ports:
 .INDENT 0.0
 .IP \(bu 2

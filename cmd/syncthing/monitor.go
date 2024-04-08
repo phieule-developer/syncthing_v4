@@ -276,7 +276,7 @@ func copyStderr(stderr io.Reader, dst io.Writer) {
 *  - Software that affects disk writes (SSD caching software and similar)       *
 *                                                                               *
 * Please see the following URL for instructions on how to recover:              *
-*   https://docs.syncthing.net/users/faq.html#my-syncthing-database-is-corrupt  *
+*   https://localhost/users/faq.html#my-syncthing-database-is-corrupt  *
 *********************************************************************************
 `)
 				} else {

@@ -442,7 +442,7 @@ func (m *model) warnAboutOverwritingProtectedFiles(cfg config.FolderConfiguratio
 	}
 
 	if len(filesAtRisk) > 0 {
-		l.Warnln("Some protected files may be overwritten and cause issues. See https://docs.syncthing.net/users/config.html#syncing-configuration-files for more information. The at risk files are:", strings.Join(filesAtRisk, ", "))
+		l.Warnln("Some protected files may be overwritten and cause issues. See https://localhost/users/config.html#syncing-configuration-files for more information. The at risk files are:", strings.Join(filesAtRisk, ", "))
 	}
 }
 
@@ -1234,7 +1234,7 @@ func (m *model) ClusterConfig(conn protocol.Connection, cm *protocol.ClusterConf
 
 	for _, info := range ccDeviceInfos {
 		if deviceCfg.Introducer && info.local.Introducer {
-			l.Warnf("Remote %v is an introducer to us, and we are to them - only one should be introducer to the other, see https://docs.syncthing.net/users/introducer.html", deviceCfg.Description())
+			l.Warnf("Remote %v is an introducer to us, and we are to them - only one should be introducer to the other, see https://localhost/users/introducer.html", deviceCfg.Description())
 		}
 		break
 	}

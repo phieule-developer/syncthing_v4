@@ -45,7 +45,7 @@ At the point of writing the endpoint output looks as follows:
         "per-session-rate": 0,
         "ping-interval": 60,
         "pools": [
-            "https://relays.syncthing.net/endpoint"
+            "https://localhost/endpoint"
         ],
         "provided-by": ""
     },
@@ -63,7 +63,7 @@ Make sure you have a public IP with port 22067 open, or have forwarded port 2206
 Run the `strelaysrv` with no arguments (or `-debug` if you want more output), and that should be enough for the server to join the public relay pool.
 You should see a message saying:
 ```
-2015/09/21 22:45:46 pool.go:60: Joined https://relays.syncthing.net/endpoint rejoining in 48m0s
+2015/09/21 22:45:46 pool.go:60: Joined https://localhost/endpoint rejoining in 48m0s
 ```
 
 See `strelaysrv -help` for other options, such as rate limits, timeout intervals, etc.

@@ -20,7 +20,7 @@ import (
 	"github.com/maruel/panicparse/v2/stack"
 )
 
-const reportServer = "https://crash.syncthing.net/report/"
+const reportServer = "https://localhost/report/"
 
 var loader = newGithubSourceCodeLoader()
 

@@ -3300,7 +3300,7 @@ angular.module('syncthing.core')
         };
 
         $scope.docsURL = function (path) {
-            var url = 'https://docs.syncthing.net';
+            var url = 'https://localhost';
             if (!$scope.versionBase()) {
                 return url;
             }
@@ -3422,7 +3422,7 @@ angular.module('syncthing.core')
             // Title and footer can be reused between different sharing
             // methods, hence we define them separately before the body.
             var title = $translate.instant('Syncthing device ID for "{%devicename%}"', {devicename: deviceName});
-            var footer = $translate.instant("Learn more at {%url%}", {url: "https://syncthing.net"});
+            var footer = $translate.instant("Learn more at {%url%}", {url: "https://localhost"});
 
             switch (method) {
                 case "email":

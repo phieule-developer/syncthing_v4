@@ -734,7 +734,7 @@ Returns information about current system status and resource usage. The CPU perc
 {
   \(dqalloc\(dq: 30618136,
   \(dqconnectionServiceStatus\(dq: {
-    \(dqdynamic+https://relays.syncthing.net/endpoint\(dq: {
+    \(dqdynamic+https://localhost/endpoint\(dq: {
       \(dqerror\(dq: null,
       \(dqlanAddresses\(dq: [
         \(dqrelay://23.92.71.120:443/?id=53STGR7\-YBM6FCX\-PAZ2RHM\-YPY6OEJ\-WYHVZO7\-PCKQRCK\-PZLTP7T\-434XCAD&pingInterval=1m0s&networkTimeout=2m0s&sessionLimitBps=0&globalLimitBps=0&statusAddr=:22070&providedBy=canton7\(dq
@@ -756,12 +756,12 @@ Returns information about current system status and resource usage. The CPU perc
   \(dqcpuPercent\(dq: 0,
   \(dqdiscoveryEnabled\(dq: true,
   \(dqdiscoveryErrors\(dq: {
-    \(dqglobal@https://discovery\-v4\-1.syncthing.net/v2/\(dq: \(dq500 Internal Server Error\(dq,
-    \(dqglobal@https://discovery\-v4\-2.syncthing.net/v2/\(dq: \(dqPost https://discovery\-v4\-2.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq,
-    \(dqglobal@https://discovery\-v4\-3.syncthing.net/v2/\(dq: \(dqPost https://discovery\-v4\-3.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq,
-    \(dqglobal@https://discovery\-v6\-1.syncthing.net/v2/\(dq: \(dqPost https://discovery\-v6\-1.syncthing.net/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host\(dq,
-    \(dqglobal@https://discovery\-v6\-2.syncthing.net/v2/\(dq: \(dqPost https://discovery\-v6\-2.syncthing.net/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host\(dq,
-    \(dqglobal@https://discovery\-v6\-3.syncthing.net/v2/\(dq: \(dqPost https://discovery\-v6\-3.syncthing.net/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host\(dq
+    \(dqglobal@https://discovery\-v4\-1localhost/v2/\(dq: \(dq500 Internal Server Error\(dq,
+    \(dqglobal@https://discovery\-v4\-2localhost/v2/\(dq: \(dqPost https://discovery\-v4\-2localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq,
+    \(dqglobal@https://discovery\-v4\-3localhost/v2/\(dq: \(dqPost https://discovery\-v4\-3localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq,
+    \(dqglobal@https://discovery\-v6\-1localhost/v2/\(dq: \(dqPost https://discovery\-v6\-1localhost/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host\(dq,
+    \(dqglobal@https://discovery\-v6\-2localhost/v2/\(dq: \(dqPost https://discovery\-v6\-2localhost/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host\(dq,
+    \(dqglobal@https://discovery\-v6\-3localhost/v2/\(dq: \(dqPost https://discovery\-v6\-3localhost/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host\(dq
   },
   \(dqdiscoveryStatus\(dq: {
     \(dqIPv4 local\(dq: {
@@ -770,23 +770,23 @@ Returns information about current system status and resource usage. The CPU perc
     \(dqIPv6 local\(dq: {
       \(dqerror\(dq: null
     },
-    \(dqglobal@https://discovery\-v4\-1.syncthing.net/v2/\(dq: {
+    \(dqglobal@https://discovery\-v4\-1localhost/v2/\(dq: {
       \(dqerror\(dq: \(dq500 Internal Server Error\(dq
     },
-    \(dqglobal@https://discovery\-v4\-2.syncthing.net/v2/\(dq: {
-      \(dqerror\(dq: \(dqPost https://discovery\-v4\-2.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq
+    \(dqglobal@https://discovery\-v4\-2localhost/v2/\(dq: {
+      \(dqerror\(dq: \(dqPost https://discovery\-v4\-2localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq
     },
-    \(dqglobal@https://discovery\-v4\-3.syncthing.net/v2/\(dq: {
-      \(dqerror\(dq: \(dqPost https://discovery\-v4\-3.syncthing.net/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq
+    \(dqglobal@https://discovery\-v4\-3localhost/v2/\(dq: {
+      \(dqerror\(dq: \(dqPost https://discovery\-v4\-3localhost/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)\(dq
     },
-    \(dqglobal@https://discovery\-v6\-1.syncthing.net/v2/\(dq: {
-      \(dqerror\(dq: \(dqPost https://discovery\-v6\-1.syncthing.net/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host\(dq
+    \(dqglobal@https://discovery\-v6\-1localhost/v2/\(dq: {
+      \(dqerror\(dq: \(dqPost https://discovery\-v6\-1localhost/v2/: dial tcp [2001:470:28:4d6::5]:443: connect: no route to host\(dq
     },
-    \(dqglobal@https://discovery\-v6\-2.syncthing.net/v2/\(dq: {
-      \(dqerror\(dq: \(dqPost https://discovery\-v6\-2.syncthing.net/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host\(dq
+    \(dqglobal@https://discovery\-v6\-2localhost/v2/\(dq: {
+      \(dqerror\(dq: \(dqPost https://discovery\-v6\-2localhost/v2/: dial tcp [2604:a880:800:10::182:a001]:443: connect: no route to host\(dq
     },
-    \(dqglobal@https://discovery\-v6\-3.syncthing.net/v2/\(dq: {
-      \(dqerror\(dq: \(dqPost https://discovery\-v6\-3.syncthing.net/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host\(dq
+    \(dqglobal@https://discovery\-v6\-3localhost/v2/\(dq: {
+      \(dqerror\(dq: \(dqPost https://discovery\-v6\-3localhost/v2/: dial tcp [2400:6180:0:d0::d9:d001]:443: connect: no route to host\(dq
     }
   },
   \(dqdiscoveryMethods\(dq: 8,
@@ -1948,7 +1948,7 @@ Returns the data sent in the anonymous usage report.
    \(dqfolderMaxMiB\(dq : 0,
    \(dqplatform\(dq : \(dqlinux\-amd64\(dq,
    \(dqtotMiB\(dq : 0,
-   \(dqlongVersion\(dq : \(dqsyncthing v0.12.2 \e\(dqBeryllium Bedbug\e\(dq (go1.4.3 linux\-amd64 default) unknown\-user@build2.syncthing.net 2015\-11\-09 13:23:26 UTC\(dq,
+   \(dqlongVersion\(dq : \(dqsyncthing v0.12.2 \e\(dqBeryllium Bedbug\e\(dq (go1.4.3 linux\-amd64 default) unknown\-user@build2localhost 2015\-11\-09 13:23:26 UTC\(dq,
    \(dqupgradeAllowedManual\(dq : true,
    \(dqtotFiles\(dq : 3,
    \(dqfolderUses\(dq : {

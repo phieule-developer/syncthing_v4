@@ -196,7 +196,7 @@ func (s *Service) reportData(ctx context.Context, urVersion int, preview bool) (
 	report.Relays.Enabled = opts.RelaysEnabled
 	for _, addr := range s.cfg.Options().ListenAddresses() {
 		switch {
-		case addr == "dynamic+https://relays.syncthing.net/endpoint":
+		case addr == "dynamic+https://localhost/endpoint":
 			report.Relays.DefaultServers++
 		case strings.HasPrefix(addr, "relay://") || strings.HasPrefix(addr, "dynamic+http"):
 			report.Relays.OtherServers++

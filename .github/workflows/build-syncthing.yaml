@@ -24,7 +24,7 @@ env:
 
   # Our build metadata
   BUILD_USER: builder
-  BUILD_HOST: github.syncthing.net
+  BUILD_HOST: localhost
 
 # A note on actions and third party code... The actions under actions/ (like
 # `uses: actions/checkout`) are maintained by GitHub, and we need to trust

@@ -46,7 +46,7 @@ var (
 	// config.
 	DefaultListenAddresses = []string{
 		//netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultTCPPort))),
-		// "dynamic+https://relays.syncthing.net/endpoint",
+		// "dynamic+https://localhost/endpoint",
 		//netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultQUICPort))),
 	}
 	DefaultGUIPort = 8384
@@ -118,7 +118,7 @@ func (cfg *Configuration) ProbeFreePorts() error {
 	} else {
 		cfg.Options.RawListenAddresses = []string{
 			netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
-			// "dynamic+https://relays.syncthing.net/endpoint",
+			// "dynamic+https://localhost/endpoint",
 			netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
 		}
 	}
