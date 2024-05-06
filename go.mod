@@ -31,7 +31,7 @@ require (
 	github.com/prometheus/client_golang v1.19.0
 	github.com/quic-go/quic-go v0.41.0
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
-	github.com/shirou/gopsutil/v3 v3.24.2
+	github.com/shirou/gopsutil/v3 v3.24.4
 	github.com/syncthing/notify v0.0.0-20210616190510-c6b7342338d2
 	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d
 	github.com/thejerf/suture/v4 v4.0.2
@@ -41,7 +41,7 @@ require (
 	go.uber.org/automaxprocs v1.5.3
 	golang.org/x/crypto v0.21.0
 	golang.org/x/net v0.21.0
-	golang.org/x/sys v0.18.0
+	golang.org/x/sys v0.19.0
 	golang.org/x/text v0.14.0
 	golang.org/x/time v0.5.0
 	golang.org/x/tools v0.18.0
